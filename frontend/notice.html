@@ -92,7 +92,7 @@ async function submitNotice(){
         };
        
         notice_data=JSON.stringify(notice_data);
-       let res=await fetch("http://localhost:5100/notice",{
+       let res=await fetch("https://crime-check.herokuapp.com/notice",{
            method:'POST',
            body:notice_data,
            headers:{
@@ -110,7 +110,7 @@ async function submitNotice(){
 getNotice()
 async function getNotice(){
    try{
-        let res=await fetch("http://localhost:5100/notice")
+        let res=await fetch("https://crime-check.herokuapp.com/notice")
       let data=await res.json();
       console.log(data);
       Display_notice(data)

@@ -68,7 +68,7 @@ async function submit(){
         name:document.getElementById("username").value,
         };
        register_data=JSON.stringify(register_data);
-       let res=await fetch("http://localhost:5100/user",{
+       let res=await fetch("https://crime-check.herokuapp.com/user",{
            method:'POST',
            body:register_data,
            headers:{
